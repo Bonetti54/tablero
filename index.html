@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es-AR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tablero Bonetti</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icono-192.png">
+<link rel="apple-touch-icon" href="icono-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Tablero">
+<meta name="theme-color" content="#04342C">
+<style>
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#dff5ec,#fde6d6);font-family:system-ui,sans-serif;color:#04342C}
+.c{background:rgba(255,255,255,.7);border-radius:28px;padding:32px 24px;max-width:360px;text-align:center;box-shadow:0 10px 30px rgba(4,52,44,.12)}
+img{width:96px;height:96px;border-radius:22px}
+h1{font-size:26px;margin:14px 0 6px}
+a.b{display:block;background:#04342C;color:#fff;text-decoration:none;font-size:20px;font-weight:700;padding:16px;border-radius:999px;margin:18px 0}
+p{font-size:16px;line-height:1.45;margin:8px 0}
+.m{display:none}
+</style></head><body>
+<div class="c">
+<img src="icono-192.png" alt="">
+<h1>Tablero Bonetti</h1>
+<a class="b" id="ir" href="https://script.google.com/macros/s/AKfycbwqoHTo7-mOTiujdOcuW49oIcO9HOa464RCBT4vzE-GoTx29MtLtdrkEq5x1vYaWp25LA/exec">Abrir tablero</a>
+<div id="ayuda">
+<p class="m" id="and">Para tenerlo como app: menú <b>⋮</b> › <b>Instalar app</b> (o <b>Agregar a pantalla principal</b>).</p>
+<p class="m" id="ios">Para tenerlo como app: botón <b>Compartir</b> › <b>Agregar a pantalla de inicio</b>.</p>
+</div>
+</div>
+<script>
+var URL_TABLERO='https://script.google.com/macros/s/AKfycbwqoHTo7-mOTiujdOcuW49oIcO9HOa464RCBT4vzE-GoTx29MtLtdrkEq5x1vYaWp25LA/exec';
+var app=matchMedia('(display-mode: standalone)').matches||navigator.standalone===true||/[?&]app=1/.test(location.search);
+if(app){location.replace(URL_TABLERO);}
+else{document.getElementById(/iPhone|iPad|iPod/.test(navigator.userAgent)?'ios':'and').style.display='block';}
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js',{scope:'./'}).catch(function(){});}
+</script>
+</body></html>

@@ -1,0 +1,2 @@
+{"name":"Tablero Bonetti","short_name":"Tablero","start_url":"./?app=1","scope":"./","display":"standalone","background_color":"#04342C","theme_color":"#04342C","lang":"es-AR",
+"icons":[{"src":"icono-192.png","sizes":"192x192","type":"image/png"},{"src":"icono-512.png","sizes":"512x512","type":"image/png"},{"src":"icono-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}]}
